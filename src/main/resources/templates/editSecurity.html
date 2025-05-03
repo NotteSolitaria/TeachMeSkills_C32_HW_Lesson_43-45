@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Security</title>
+</head>
+<body>
+<h2>Edit Security</h2>
+
+<form th:action="@{/security/update/{id}(id=${security.id})}" th:object="${security}" method="post">
+    <label>Login:</label>
+    <input type="text" th:field="*{login}" />
+    <br/>
+    <label>Password:</label>
+    <input type="text" th:field="*{password}" />
+    <br/>
+    <button type="submit">Update</button>
+</form>
+
+</body>
+</html>

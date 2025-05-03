@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Create Security</title>
+</head>
+<body>
+<h2>Create Security</h2>
+
+<form th:action="@{/security/create}" th:object="${security}" method="post">
+    <label>Login:</label>
+    <input type="text" th:field="*{login}" />
+    <br/>
+
+    <label>Password:</label>
+    <input type="text" th:field="*{password}" />
+    <br/>
+
+    <button type="submit">Create</button>
+</form>
+
+<div th:if="${errors}">
+    <p>Errors:</p>
+    <ul>
+        <li th:each="err : ${errors}" th:text="${err.defaultMessage}"></li>
+    </ul>
+</div>
+</body>
+</html>

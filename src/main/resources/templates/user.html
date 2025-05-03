@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <title>User Details</title>
+</head>
+<body>
+<h2>User Details</h2>
+
+<p>ID: <span th:text="${user.id}"></span></p>
+<p>First name: <span th:text="${user.first_name}"></span></p>
+<p>Second name: <span th:text="${user.second_name}"></span></p>
+<p>Age: <span th:text="${user.age}"></span></p>
+<p>Email: <span th:text="${user.email}"></span></p>
+<p>Is deleted: <span th:text="${user.deleted}"></span></p>
+
+<a th:href="@{/security/registration}">Back to Registration</a>
+</body>
+</html>
